@@ -6,6 +6,7 @@ const router = Router();
 router
     .get("/", BookController.listAllBooks)
     .get("/books", BookController.listAllBooks)
+    .get("/books/search/", BookController.listBookByPublisher)
     .get("/books/:id", BookController.listBookById)
     .post("/books", BookController.registerNewBook)
     .patch("/books/:id", BookController.updateBook)

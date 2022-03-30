@@ -54,4 +54,10 @@ export default class BookController {
             }
         })
     }
+    static listBookByPublisher(req, res) {
+        const publisher = req.query.editora;
+        Book.find({ 'editora': publisher }, {}, (err, books) => {
+            res.status(200).send(books);
+        })
+    }
 };
