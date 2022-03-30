@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-mongoose.connect("mongodb+srv://LuthGom:SenhaMongoDb.500@cluster0.t36cv.mongodb.net/bookstore-api");
+mongoose.connect(process.env.MONGO_DB);
 
 let db = mongoose.connection;
 
