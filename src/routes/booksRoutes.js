@@ -4,7 +4,6 @@ import BookController from "../controllers/booksController.js";
 const router = Router();
 
 router
-    .get("/", BookController.listAllBooks)
     .get("/books", BookController.listAllBooks)
     .get("/books/search", BookController.listBookByPublisher)
     .get("/books/:id", BookController.listBookById)

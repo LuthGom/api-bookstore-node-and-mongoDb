@@ -4,7 +4,6 @@ import AuthorController from "../controllers/authorsController.js";
 const router = Router();
 
 router
-    .get("/", AuthorController.listAllAuthors)
     .get("/authors", AuthorController.listAllAuthors)
     .get("/authors/:id", AuthorController.listAuthorById)
     .post("/authors", AuthorController.registerNewAuthor)
